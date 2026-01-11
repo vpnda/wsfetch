@@ -13,10 +13,10 @@ $(TOOL_DIR): $(BUILD_DIR)
 	mkdir -p $(TOOL_DIR)
 
 $(MOCKGEN): $(TOOL_DIR)
-	GOBIN=$(TOOL_DIR) go install github.com/golang/mock/mockgen
+	GOBIN=$(TOOL_DIR) go install github.com/golang/mock/mockgen@latest
 
 $(GENQLIENT): $(TOOL_DIR)
-	GOBIN=$(TOOL_DIR) go install github.com/Khan/genqlient
+	GOBIN=$(TOOL_DIR) go install github.com/Khan/genqlient@latest
 
 generate: $(MOCKGEN) $(GENQLIENT)
 	PATH="$(PATH):$(TOOL_DIR):$(SCRIPTS_BIN_DIR)" go generate ./...

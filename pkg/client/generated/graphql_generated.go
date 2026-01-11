@@ -610,7 +610,7 @@ func (v *AccountCoreAccountOwnersAccountOwner) GetOwnershipType() string {
 }
 
 // GetActiveInvitation returns AccountCoreAccountOwnersAccountOwner.ActiveInvitation, and is useful for accessing the field via an interface.
-func (v *AccountCoreAccountOwnersAccountOwner) GetActiveInvitation() []AccountOwnerActiveInvitationAccountOwnerInvitation {
+func (v *AccountCoreAccountOwnersAccountOwner) GetActiveInvitation() AccountOwnerActiveInvitationAccountOwnerInvitation {
 	return v.AccountOwner.ActiveInvitation
 }
 
@@ -663,7 +663,7 @@ type __premarshalAccountCoreAccountOwnersAccountOwner struct {
 
 	OwnershipType string `json:"ownershipType"`
 
-	ActiveInvitation []AccountOwnerActiveInvitationAccountOwnerInvitation `json:"activeInvitation"`
+	ActiveInvitation AccountOwnerActiveInvitationAccountOwnerInvitation `json:"activeInvitation"`
 
 	SentInvitations []AccountOwnerSentInvitationsAccountOwnerInvitation `json:"sentInvitations"`
 }
@@ -1527,17 +1527,17 @@ func (v *AccountFinancialsFinancialsAccountFinancialsCurrentCombinedAccountCurre
 
 // AccountOwner includes the GraphQL fields of AccountOwner requested by the fragment AccountOwner.
 type AccountOwner struct {
-	AccountId                      string                                               `json:"accountId"`
-	IdentityId                     string                                               `json:"identityId"`
-	AccountNickname                *string                                              `json:"accountNickname"`
-	ClientCanonicalId              string                                               `json:"clientCanonicalId"`
-	AccountOpeningAgreementsSigned *bool                                                `json:"accountOpeningAgreementsSigned"`
-	Name                           string                                               `json:"name"`
-	Email                          string                                               `json:"email"`
-	OwnershipType                  string                                               `json:"ownershipType"`
-	ActiveInvitation               []AccountOwnerActiveInvitationAccountOwnerInvitation `json:"activeInvitation"`
-	SentInvitations                []AccountOwnerSentInvitationsAccountOwnerInvitation  `json:"sentInvitations"`
-	Typename                       *string                                              `json:"__typename"`
+	AccountId                      string                                              `json:"accountId"`
+	IdentityId                     string                                              `json:"identityId"`
+	AccountNickname                *string                                             `json:"accountNickname"`
+	ClientCanonicalId              string                                              `json:"clientCanonicalId"`
+	AccountOpeningAgreementsSigned *bool                                               `json:"accountOpeningAgreementsSigned"`
+	Name                           string                                              `json:"name"`
+	Email                          string                                              `json:"email"`
+	OwnershipType                  string                                              `json:"ownershipType"`
+	ActiveInvitation               AccountOwnerActiveInvitationAccountOwnerInvitation  `json:"activeInvitation"`
+	SentInvitations                []AccountOwnerSentInvitationsAccountOwnerInvitation `json:"sentInvitations"`
+	Typename                       *string                                             `json:"__typename"`
 }
 
 // GetAccountId returns AccountOwner.AccountId, and is useful for accessing the field via an interface.
@@ -1567,7 +1567,7 @@ func (v *AccountOwner) GetEmail() string { return v.Email }
 func (v *AccountOwner) GetOwnershipType() string { return v.OwnershipType }
 
 // GetActiveInvitation returns AccountOwner.ActiveInvitation, and is useful for accessing the field via an interface.
-func (v *AccountOwner) GetActiveInvitation() []AccountOwnerActiveInvitationAccountOwnerInvitation {
+func (v *AccountOwner) GetActiveInvitation() AccountOwnerActiveInvitationAccountOwnerInvitation {
 	return v.ActiveInvitation
 }
 

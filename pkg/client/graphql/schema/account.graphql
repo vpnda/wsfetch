@@ -67,7 +67,7 @@ type AccountOwner {
   name: String!
   email: String!
   ownershipType: String!
-  activeInvitation: [AccountOwnerInvitation!]
+  activeInvitation: AccountOwnerInvitation!
   sentInvitations: [AccountOwnerInvitation!]
 }
 
